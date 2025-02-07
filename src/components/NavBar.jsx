@@ -5,7 +5,6 @@ import {
   Input,
   HStack,
   Icon,
-  IconButton,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { LuSearch } from "react-icons/lu";
@@ -14,12 +13,10 @@ import { LuShoppingCart } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
-  DrawerActionTrigger,
   DrawerBackdrop,
   DrawerBody,
   DrawerCloseTrigger,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerRoot,
   DrawerTitle,
@@ -78,12 +75,12 @@ const NavBar = () => {
         </InputGroup>
 
         <HStack spacing={16} alignItems={"center"}>
-          <Link to={"/create"}>
+          <Link to={"/"}>
             <Icon size={"md"}>
               <LuShoppingCart />
             </Icon>
           </Link>
-          <Link to={"/create"}>
+          <Link to={"/"}>
             <Icon size={"md"}>
               <CgProfile />
             </Icon>
