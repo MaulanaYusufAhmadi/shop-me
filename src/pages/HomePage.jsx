@@ -7,7 +7,9 @@ import {
   HStack,
   Text,
   Button,
+  Separator,
 } from "@chakra-ui/react";
+import ProductCard from "../components/ProductCard";
 
 const HomePage = () => {
   return (
@@ -149,13 +151,85 @@ const HomePage = () => {
       </Box>
 
       {/* Brand Section */}
-      <Box h={{ base: "18vh", lg: "12vh" }} bg={"black"} alignContent={"center"}>
+      <Box
+        h={{ base: "18vh", lg: "12vh" }}
+        bg={"black"}
+        alignContent={"center"}
+      >
         <Flex justifyContent={"space-around"} wrap={"wrap"} spaceY={2}>
-          <Image fit={"contain"} w={"15vh"} src="/versace.png" alt="calvin klein" />
-          <Image fit={"contain"} w={"10vh"} src="/zara.png" alt="calvin klein" />
-          <Image fit={"contain"} w={"15vh"} src="/gucci.png" alt="calvin klein" />
-          <Image fit={"contain"} w={"15vh"} src="/prada.png" alt="calvin klein" />
-          <Image fit={"contain"} w={"15vh"} src="/calvin.png" alt="calvin klein" />
+          <Image
+            fit={"contain"}
+            w={"15vh"}
+            src="/versace.png"
+            alt="calvin klein"
+          />
+          <Image
+            fit={"contain"}
+            w={"10vh"}
+            src="/zara.png"
+            alt="calvin klein"
+          />
+          <Image
+            fit={"contain"}
+            w={"15vh"}
+            src="/gucci.png"
+            alt="calvin klein"
+          />
+          <Image
+            fit={"contain"}
+            w={"15vh"}
+            src="/prada.png"
+            alt="calvin klein"
+          />
+          <Image
+            fit={"contain"}
+            w={"15vh"}
+            src="/calvin.png"
+            alt="calvin klein"
+          />
+        </Flex>
+      </Box>
+
+      {/* New Arrival Section */}
+      <Box h={"86vh"} bg={"white"} pt={"12"}>
+        <Flex flexDir={"column"} justifyContent={"center"}>
+          <Text
+            fontSize={{
+              base: "xl",
+              sm: "4xl",
+            }}
+            my={"8"}
+            textAlign={"center"}
+            fontWeight={"extrabold"}
+            flexWrap={"wrap"}
+            minW={"30vh"}
+          >
+            NEW ARRIVAL
+          </Text>
+          <Box mx={"auto"} w={"80%"}>
+            <HStack justifyContent={"start"} overflowX={"auto"} gapX={4}>
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+            </HStack>
+          </Box>
+          <Button
+            mx={"auto"}
+            borderWidth={"1"}
+            borderColor={"gray.200"}
+            color={"black"}
+            my={8}
+            bg={"white"}
+            w={"20vh"}
+            rounded={"full"}
+            size={"lg"}
+          >
+            View all
+          </Button>
+          <Box mx={"auto"} w={"80%"}>
+            <Separator size={"md"}/>
+          </Box>
         </Flex>
       </Box>
     </Container>
