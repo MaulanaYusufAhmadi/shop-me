@@ -4,14 +4,21 @@ import {
   Box,
   Flex,
   Stack,
+  HStack,
   Text,
   Button,
 } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
-    <Container minH={"lvh"} display={"flex"} flexDir={"column"} p={0} bg={"white"}>
-
+    <Container
+      overflow={"hidden"}
+      minH={"lvh"}
+      display={"flex"}
+      flexDir={"column"}
+      p={0}
+      bg={"white"}
+    >
       {/* Hero Section */}
       <Box h={"86vh"} bg={"brand.100"}>
         <Flex
@@ -31,7 +38,7 @@ const HomePage = () => {
             <Stack
               justifyContent={{
                 base: "start",
-                sm: "center"
+                sm: "center",
               }}
               spaceY={4}
             >
@@ -128,24 +135,29 @@ const HomePage = () => {
           </Stack>
           <Image
             w={{
-              base: "sm",
+              sm: "sm",
+              md: "xl",
               xl: "full",
             }}
             h={"full"}
-            display={"block"}
             justifySelf={"end"}
             src="/pict.png"
-            fit={"cover"}
+            fit={"contain"}
             alt="Hero Picture"
           />
         </Flex>
       </Box>
 
       {/* Brand Section */}
-      <Box h={"12vh"} bg={"black"}>
-        
+      <Box h={{ base: "18vh", lg: "12vh" }} bg={"black"} alignContent={"center"}>
+        <Flex justifyContent={"space-around"} wrap={"wrap"} spaceY={2}>
+          <Image fit={"contain"} w={"15vh"} src="/versace.png" alt="calvin klein" />
+          <Image fit={"contain"} w={"10vh"} src="/zara.png" alt="calvin klein" />
+          <Image fit={"contain"} w={"15vh"} src="/gucci.png" alt="calvin klein" />
+          <Image fit={"contain"} w={"15vh"} src="/prada.png" alt="calvin klein" />
+          <Image fit={"contain"} w={"15vh"} src="/calvin.png" alt="calvin klein" />
+        </Flex>
       </Box>
-
     </Container>
   );
 };
