@@ -12,6 +12,7 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import ProductCard from "../components/ProductCard";
+import Testimonials from "../components/Testimonials";
 
 const HomePage = () => {
   return (
@@ -437,6 +438,27 @@ const HomePage = () => {
           </SimpleGrid>
         </Flex>
       </Box>
+
+      {/* Testimonial Section */}
+      <Box h={"50vh"}>
+        <Flex flexDir={"column"} justifyContent={"center"} px={16} py={8}>
+          <Text
+            fontSize={{
+              base: "xl",
+              sm: "4xl",
+            }}
+            fontWeight={"extrabold"}
+            flexWrap={"wrap"}
+            minW={"30vh"}
+          >
+            OUR HAPPY CUSTOMERS
+          </Text>
+         <Testimonials></Testimonials>
+        </Flex>
+      </Box>
+
+      {/* Footer Section */}
+      
     </Container>
   );
 };
