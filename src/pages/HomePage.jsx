@@ -10,9 +10,15 @@ import {
   Separator,
   SimpleGrid,
   GridItem,
+  Input,
+  VStack,
+  IconButton,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import Testimonials from "../components/Testimonials";
+import { TiSocialTwitter, TiSocialFacebook } from "react-icons/ti";
+import { FaGithub, FaInstagram } from "react-icons/fa";
 
 const HomePage = () => {
   return (
@@ -453,12 +459,181 @@ const HomePage = () => {
           >
             OUR HAPPY CUSTOMERS
           </Text>
-         <Testimonials></Testimonials>
+          <Testimonials></Testimonials>
         </Flex>
       </Box>
 
       {/* Footer Section */}
-      
+      <Box h={"50vh"} mt={36} pt={36} position={"relative"} bg={"gray.100"}>
+        <Box
+          position={"absolute"}
+          top={-24}
+          left={{
+            base: 5,
+            sm: 8,
+            md: 10,
+            lg: 20,
+          }}
+          color={"white"}
+          w={"90%"}
+          h={"25vh"}
+          rounded={"3xl"}
+          bg={"black"}
+        >
+          <Flex
+            flexDir={{
+              base: "column",
+              sm: "row",
+            }}
+            px={12}
+            alignContent={"center"}
+            justifyContent={"space-between"}
+          >
+            <Text
+              w={"70%"}
+              fontSize={{
+                base: "xl",
+                sm: "5xl",
+              }}
+              my={"8"}
+              textAlign={"start"}
+              fontWeight={"extrabold"}
+              flexWrap={"wrap"}
+              minW={"30vh"}
+            >
+              STAY UPTO DATE ABOUT OUR LATEST OFFERS
+            </Text>
+            <VStack
+              justifyContent={"center"}
+              gap={{
+                base: 2,
+                sm: 4,
+              }}
+            >
+              <Input
+                bg={"white"}
+                color={"black"}
+                rounded={"full"}
+                placeholder="Enter your email address"
+              />
+              <Button bg={"white"} color={"gray.800"} rounded={"full"} px={10}>
+                Subscribe to Newsletter
+              </Button>
+            </VStack>
+          </Flex>
+        </Box>
+        <Flex
+          justifyContent={{ base: "start", sm: "space-around" }}
+          flexDir={{ base: "column", sm: "row" }}
+        >
+          <Flex flexDir={"column"} spaceY={6}>
+            <Text fontSize={"2xl"} fontWeight={"extrabold"}>
+              <Link to={"/"}>SHOP.ME</Link>
+            </Text>
+            <Text fontSize={"xs"} w={72}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+              ipsa sit aut id, aperiam mollitia?
+            </Text>
+            <HStack>
+              <IconButton size={"2xs"} aria-label="Call support" rounded="full">
+                <TiSocialTwitter />
+              </IconButton>
+              <IconButton size={"2xs"} aria-label="Call support" rounded="full">
+                <TiSocialFacebook />
+              </IconButton>
+              <IconButton size={"2xs"} aria-label="Call support" rounded="full">
+                <FaInstagram />
+              </IconButton>
+              <IconButton size={"2xs"} aria-label="Call support" rounded="full">
+                <FaGithub />
+              </IconButton>
+            </HStack>
+          </Flex>
+          <Flex
+            flexWrap={"wrap"}
+            justify={"space-between"}
+            w={"60%"}
+            h={"auto"}
+          >
+            <Flex flexDir={"column"} spaceY={4}>
+              <Text fontSize={"md"} fontWeight={"medium"}>
+                Company
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">About</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Features</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Works</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Career</a>
+              </Text>
+            </Flex>
+            <Flex flexDir={"column"} spaceY={4}>
+              <Text fontSize={"md"} fontWeight={"medium"}>
+                Help
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Customer Support</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Delivery Details</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Terms and Conditions</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Privacy Policy</a>
+              </Text>
+            </Flex>
+            <Flex flexDir={"column"} spaceY={4}>
+              <Text fontSize={"md"} fontWeight={"medium"}>
+                FAQ
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Account</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Manage Deliveries</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Orders</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Payments</a>
+              </Text>
+            </Flex>
+            <Flex flexDir={"column"} spaceY={4}>
+              <Text fontSize={"md"} fontWeight={"medium"}>
+                Resources
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Free eBooks</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Development Tutorial</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">How to Blog</a>
+              </Text>
+              <Text fontSize={"sm"} fontWeight={"light"}>
+                <a href="#">Youtube Playlist</a>
+              </Text>
+            </Flex>
+          </Flex>
+        </Flex>
+        <Box my={4} w={"90%"} mx={"auto"}>
+          <Separator />
+        </Box>
+        <Flex justifyContent={"center"}>
+          <Text fontSize={"sm"} color={"gray.500"}>
+            Shop.me 2025. All Right Reserved
+          </Text>
+        </Flex>
+      </Box>
     </Container>
   );
 };
